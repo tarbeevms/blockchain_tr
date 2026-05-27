@@ -1,0 +1,4 @@
+blockchain/data/*
+!blockchain/data/.gitkeep
+backend/voting-backend
+*.exe

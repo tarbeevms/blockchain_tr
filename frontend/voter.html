@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Голосование | Ethereum Voting</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="voter">
+  <header class="topbar">
+    <a class="brand" href="index.html">Ethereum Voting</a>
+    <nav>
+      <a href="admin.html">Администратор</a>
+      <a class="active" href="voter.html">Голосование</a>
+      <a href="results.html">Результаты</a>
+      <a href="blockchain.html">Блокчейн</a>
+    </nav>
+  </header>
+
+  <main class="shell grid-layout">
+    <section class="panel wide">
+      <div class="panel-head">
+        <h1>Голосование</h1>
+        <span id="votingBadge" class="badge">загрузка</span>
+      </div>
+      <form id="voteForm" class="form">
+        <div class="field-grid">
+          <label>
+            Пользователь
+            <select id="voterSelect" name="voter">
+              <option value="voter1">voter1</option>
+              <option value="voter2">voter2</option>
+              <option value="voter3">voter3</option>
+            </select>
+          </label>
+          <label>
+            Кандидат
+            <select id="candidateSelect" name="candidateId"></select>
+          </label>
+        </div>
+        <button type="submit">Проголосовать</button>
+      </form>
+      <p id="voteMessage" class="message"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Аккаунты</h2>
+      <div id="accountList" class="list compact-list"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Кандидаты</h2>
+      <div id="candidateList" class="list compact-list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+services:
+  geth:
+    build:
+      context: ./blockchain
+    ports:
+      - "8545:8545"
+    volumes:
+      - ./blockchain/data:/root/.ethereum
+      - ./blockchain/keystore:/root/.ethereum/keystore
+    environment:
+      ETHERBASE_ADDRESS: "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8080:8080"
+    environment:
+      ETH_RPC_URL: "http://geth:8545"
+      CHAIN_ID: "2025"
+    depends_on:
+      - geth
+
+  frontend:
+    image: nginx:alpine
+    ports:
+      - "3000:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html:ro
+    depends_on:
+      - backend

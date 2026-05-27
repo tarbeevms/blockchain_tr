@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Результаты | Ethereum Voting</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="results">
+  <header class="topbar">
+    <a class="brand" href="index.html">Ethereum Voting</a>
+    <nav>
+      <a href="admin.html">Администратор</a>
+      <a href="voter.html">Голосование</a>
+      <a class="active" href="results.html">Результаты</a>
+      <a href="blockchain.html">Блокчейн</a>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <section class="panel">
+      <div class="panel-head">
+        <h1>Результаты голосования</h1>
+        <button id="refreshResultsBtn" type="button">Обновить</button>
+      </div>
+      <div id="resultsList" class="results-list"></div>
+      <p id="resultsMessage" class="message"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Блокчейн | Ethereum Voting</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="blockchain">
+  <header class="topbar">
+    <a class="brand" href="index.html">Ethereum Voting</a>
+    <nav>
+      <a href="admin.html">Администратор</a>
+      <a href="voter.html">Голосование</a>
+      <a href="results.html">Результаты</a>
+      <a class="active" href="blockchain.html">Блокчейн</a>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <h1>Блокчейн</h1>
+          <p class="panel-note">Последние блоки с транзакциями, функции контракта и события из receipt logs.</p>
+        </div>
+        <div class="button-row">
+          <select id="blockLimit" aria-label="Количество блоков">
+            <option value="20">20 tx-блоков</option>
+            <option value="50">50 tx-блоков</option>
+            <option value="100">100 tx-блоков</option>
+          </select>
+          <button id="refreshBlockchainBtn" type="button">Обновить</button>
+        </div>
+      </div>
+
+      <section class="status-band explorer-summary">
+        <div>
+          <span class="label">Последний блок</span>
+          <strong id="latestBlock">-</strong>
+        </div>
+        <div>
+          <span class="label">Контракт</span>
+          <strong id="explorerContract">-</strong>
+        </div>
+        <div>
+          <span class="label">RPC</span>
+          <strong>localhost:8545</strong>
+        </div>
+      </section>
+
+      <div id="blockchainMessage" class="message"></div>
+      <div id="blockList" class="block-list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

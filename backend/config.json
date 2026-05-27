@@ -1,0 +1,11 @@
+{
+  "rpcUrl": "http://geth:8545",
+  "chainId": 2025,
+  "contractAddress": "",
+  "adminPrivateKey": "ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80",
+  "voters": {
+    "voter1": "59c6995e998f97a5a0044966f0945386d6d004db6e44f7d2adead8f2755b13b9",
+    "voter2": "5de4111a56a23011c6c066a09d28a1e0fc4db74f79bb44a8a664a6f2f17b0d4e",
+    "voter3": "7c85211829403a92b1b2b8e18fc98a02d16e7e4ec16fd57d6e673bed64f2d8a8"
+  }
+}

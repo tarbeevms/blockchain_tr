@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Администратор | Ethereum Voting</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="admin">
+  <header class="topbar">
+    <a class="brand" href="index.html">Ethereum Voting</a>
+    <nav>
+      <a class="active" href="admin.html">Администратор</a>
+      <a href="voter.html">Голосование</a>
+      <a href="results.html">Результаты</a>
+      <a href="blockchain.html">Блокчейн</a>
+    </nav>
+  </header>
+
+  <main class="shell grid-layout">
+    <section class="panel wide">
+      <div class="panel-head">
+        <h1>Панель администратора</h1>
+        <span id="votingBadge" class="badge">загрузка</span>
+      </div>
+      <div class="address-row">
+        <span>Адрес контракта</span>
+        <code id="contractAddress">не развернут</code>
+      </div>
+      <div class="button-row">
+        <button id="deployBtn" type="button">Задеплоить контракт</button>
+        <button id="startBtn" type="button">Запустить голосование</button>
+        <button id="stopBtn" type="button" class="danger">Остановить голосование</button>
+      </div>
+      <p id="adminMessage" class="message"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Добавить кандидата</h2>
+      <form id="candidateForm" class="form">
+        <label for="candidateName">Имя кандидата</label>
+        <div class="inline-form">
+          <input id="candidateName" name="name" type="text" placeholder="Иванов" autocomplete="off" required>
+          <button type="submit">Добавить</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Кандидаты</h2>
+      <div id="candidateList" class="list compact-list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

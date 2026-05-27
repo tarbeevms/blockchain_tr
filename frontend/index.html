@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ethereum Voting</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <header class="topbar">
+    <a class="brand" href="index.html">Ethereum Voting</a>
+    <nav>
+      <a href="admin.html">Администратор</a>
+      <a href="voter.html">Голосование</a>
+      <a href="results.html">Результаты</a>
+      <a href="blockchain.html">Блокчейн</a>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Локальная приватная Ethereum-сеть</p>
+        <h1>Электронное голосование на Solidity и Go</h1>
+        <p class="lead">Учебное web-приложение для деплоя смарт-контракта, голосования от локальных аккаунтов и просмотра результатов из блокчейна.</p>
+      </div>
+      <div class="quick-grid">
+        <a class="action-card" href="admin.html">
+          <span>01</span>
+          <strong>Панель администратора</strong>
+          <small>Deploy, кандидаты, запуск и остановка</small>
+        </a>
+        <a class="action-card" href="voter.html">
+          <span>02</span>
+          <strong>Страница голосования</strong>
+          <small>voter1, voter2, voter3</small>
+        </a>
+        <a class="action-card" href="results.html">
+          <span>03</span>
+          <strong>Результаты</strong>
+          <small>Подсчёт голосов из контракта</small>
+        </a>
+        <a class="action-card" href="blockchain.html">
+          <span>04</span>
+          <strong>Блокчейн</strong>
+          <small>Блоки, транзакции и события</small>
+        </a>
+      </div>
+    </section>
+
+    <section class="status-band">
+      <div>
+        <span class="label">Контракт</span>
+        <strong id="contractAddress">не развернут</strong>
+      </div>
+      <div>
+        <span class="label">Статус</span>
+        <strong id="votingStatus">загрузка</strong>
+      </div>
+      <div>
+        <span class="label">Кандидаты</span>
+        <strong id="candidatesCount">0</strong>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
